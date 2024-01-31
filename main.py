@@ -13,7 +13,7 @@ def predictHelper(comment):
     if comment:
         new_comment = loaded_vectorizer.transform([comment])
         prediction = loaded_model.predict(new_comment)
-        return True if prediction[0] == 'spam' else False
+        return True if prediction[0] == 1 else False
     else:
         return "Internal Server Error"
 
